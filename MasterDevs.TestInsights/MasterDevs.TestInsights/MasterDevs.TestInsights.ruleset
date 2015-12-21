@@ -74,6 +74,7 @@
     <Rule Id="RECS0078" Action="Warning" />
     <Rule Id="RECS0094" Action="Warning" />
     <Rule Id="RECS0103" Action="Warning" />
+    <Rule Id="RECS0138" Action="None" />
     <Rule Id="RECS0145" Action="None" />
     <Rule Id="RECS0164" Action="Warning" />
   </Rules>
