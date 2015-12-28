@@ -10,6 +10,7 @@ namespace MasterDevs.TestInsights
     {
         private readonly Stopwatch _timer = new Stopwatch();
 
+        public string EventName { get; set; }
         public ActionTargets Targets { get { return ActionTargets.Suite | ActionTargets.Test; } }
 
         public void AfterTest(TestDetails test)
@@ -17,9 +18,10 @@ namespace MasterDevs.TestInsights
             if (null != test?.Method?.Name)
             {
                 _timer.Stop();
-                Debug.WriteLine($"Sending telemtry to AppInsights:  {test.Method.Name} took {_timer.ElapsedMilliseconds} ms");
+                var testName = GetEventName(test);
+                Debug.WriteLine($"Sending telemtry to AppInsights:  {testName} took {_timer.ElapsedMilliseconds} ms");
 
-                InsightsClient.Track(test.Method.Name, _timer.ElapsedMilliseconds);
+                InsightsClient.Track(testName, _timer.ElapsedMilliseconds);
             }
         }
 
@@ -30,6 +32,13 @@ namespace MasterDevs.TestInsights
             {
                 _timer.Start();
             }
+        }
+
+        private string GetEventName(TestDetails test)
+        {
+            if (!string.IsNullOrWhiteSpace(EventName)) return EventName;
+
+            return test.Method.Name;
         }
 
         private void PreConditionCheck(string methodName)

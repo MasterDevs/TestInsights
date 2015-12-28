@@ -11,6 +11,8 @@ namespace MasterDevs.TestInsights
 
         static InsightsClient()
         {
+            InsightsLoader.ForceLoadingOfAppInsightAssemblies();
+
             _client = new TelemetryClient();
             _client.Context.Session.Id = Guid.NewGuid().ToString();
         }

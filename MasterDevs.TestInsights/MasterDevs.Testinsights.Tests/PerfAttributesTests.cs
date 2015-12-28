@@ -3,13 +3,12 @@ using NUnit.Framework;
 using System;
 using System.Threading;
 
-
 [assembly: PerfSetup("e80064d8-fc18-431b-9953-60d4a9c626fe")]
 
-namespace MasterDevs.TestInsights
+namespace MasterDevs.Testinsights.Tests
 {
     [TestFixture]
-    public class Xyz
+    public class PerfAttributesTests
     {
         [Test]
         [Perf]
@@ -29,6 +28,13 @@ namespace MasterDevs.TestInsights
         [Test]
         [Perf]
         public void ShortTest()
+        {
+            Assert.IsTrue(true);
+        }
+
+        [Test]
+        [Perf(EventName = "TestWithAGoodName")]
+        public void TestWithAUselessName()
         {
             Assert.IsTrue(true);
         }
