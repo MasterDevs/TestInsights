@@ -83,6 +83,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="CoolWhipReadMe.md" />
+    <None Include="MasterDevs.TestInsights.nuspec" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

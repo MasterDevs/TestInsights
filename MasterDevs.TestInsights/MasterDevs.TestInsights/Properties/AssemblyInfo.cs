@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("MasterDevs.TestInsights")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Adds an attribute to easily track perfomance tests using NUnit and Application Insights")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("MasterDevs")]
 [assembly: AssemblyProduct("MasterDevs.TestInsights")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
