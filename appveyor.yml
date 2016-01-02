@@ -68,7 +68,7 @@ build:
   publish_nuget_symbols: true
   verbosity: minimal
 artifacts:
-- path: '**\*.nupkg'
+- path: '*.nupkg'
   name: MasterDevs.TestInsights
 deploy:
 - provider: GitHub
