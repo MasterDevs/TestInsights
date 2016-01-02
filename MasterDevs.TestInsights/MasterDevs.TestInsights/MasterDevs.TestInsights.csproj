@@ -82,6 +82,7 @@
     <None Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="CoolWhipReadMe.md" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
